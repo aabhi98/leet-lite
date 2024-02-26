@@ -1,0 +1,76 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Password">
+        <button>Sign In</button>
+        <br/>
+        <div id="problem-statements" style="width: 70vw;"> 
+    </div>
+    <div>
+        <button onclick="renderProblems1()">1</button>
+        <button onclick="renderProblems2()">2</button>
+    </div>
+    <script>
+        const problems = [{
+            title: "2-sum",
+            difficulty: "Easy",
+            acceptance: "70%"
+        },{
+            title: "Happy Number",
+            difficulty: "Medium",
+            acceptance: "40%"                
+        },{
+            title: "N-queens",
+            difficulty: "Hard",
+            acceptance: "30%"
+        }];
+        const problems2 = [{
+            title: "Title1",
+            difficulty: "Easy",
+            acceptance: "70%"
+        },{
+            title: "Title2",
+            difficulty: "Medium",
+            acceptance: "40%"                
+        },{
+            title: "Title3",
+            difficulty: "Hard",
+            acceptance: "30%"
+        }];
+
+        function renderProblems1(problems){
+            const parentEl = document.getElementById("problem-statement");
+            parentEl.innerHTML = "";
+            renderProblems(problems);
+        }
+
+        function renderProblems2(problems2){
+            const parentEl = document.getElementById("problem-statement");
+            parentEl.innerHTML = "";
+            renderProblems(problems2);
+        }
+
+        function renderProblems(problemsList){
+            const parentEl = document.getElementById("problem-statement");
+            const tableTag = document.createElement("table");
+            for(let i=0; i<problemsList.length; i++){
+                const trTag = document.createElement("tr");
+                const tdEl1 = document.createElement("td");
+                tdEl.innerHTML = problemsList[i].title;
+                const tdEl2 = document.createElement("td");
+                tdEl2.innerHTML = problemsList[i].difficulty;
+                const tdEl3 = document.createElement("td");
+                tdEl3.innerHTML = problemsList[i].acceptance("td");
+
+                trTag.appendChild(tdEl1);
+                trTag.appendChild(tdEl2);
+                trTag.appendChild(tdEl3);
+                tableTag.appendChild(trTag);
+            }
+            parentEl.appendChild(tableTag);
+        }
+    </script>
+    </body>
+</html>

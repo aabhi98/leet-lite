@@ -1,0 +1,98 @@
+/* User.css */
+
+/* Style for the tabs container */
+.navbar .nav-tabs {
+    display: flex; /* Use flexbox to align items horizontally */
+    position: fixed; /* Position fixed at the top */
+    top: 0; /* Align at the top of the page */
+    width: 100%; /* Occupy full width */
+    background-color: #cac3c3; /* Optional: Background color for tabs */
+    z-index: 1000; /* Optional: Ensure tabs appear above other content */
+
+}
+  
+/* Style for each individual tab button */
+.navbar .nav-item {
+    margin-right: 10px; /* Add spacing between tab buttons */
+}
+
+.brand-text {
+    margin-left: 0%; /* Adjust margin as needed */
+    color: rgb(239, 182, 11);
+  }
+  
+/* Style for the tabs content */
+.tab-content {
+    margin-top: 50px; /* Adjust to account for the height of the fixed tabs */
+}
+
+/* Style for the left div */
+.left-div {
+    border: 1px solid black;
+    width: 50%; /* Set left div width to 50% */
+    padding: 5px; /* Add padding for spacing */
+    position: fixed; /* Position fixed */
+    top: 70px; /* Align below the fixed tabs */
+    left: 0; /* Align at the left of the page */
+    bottom: 0; /* Occupy full height */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+}
+
+.problem-statement {
+    display: flex; /* Use flexbox */
+  }
+  
+  .inner-div-1,
+  .inner-div-2,
+  .inner-div-3 {
+    flex: 1; /* Each inner-div takes up equal space */
+  }
+  
+  
+/* Style for the right div */
+.right-div {
+    border: 1px solid black;
+    width: 50%; /* Set right div width to 50% */
+    padding: 5px; /* Add padding for spacing */
+    position: fixed; /* Position fixed */
+    top: 70px; /* Align below the fixed tabs */
+    right: 0; /* Align at the right of the page */
+    bottom: 0; /* Occupy full height */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+    margin-left: 50%; /* Ensure right div starts after the left div */
+    background-color: rgba(102, 96, 96, 0.2); /* Transparent white background */
+}
+  
+  .input-container {
+    flex-grow: 1; /* Make the input container grow and occupy remaining space */
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Align items vertically in the input container */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+  }
+  
+  input[type="text"] {
+    width: 93%; /* Make the input box occupy full width of its container */
+    height: 45%;
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+}
+
+
+  .input-container select {
+    margin-left: 10px;
+  }
+
+  .input-container input[type="text"] {
+    flex-grow: 1; /* Make the input box occupy remaining space */
+    background-color: cornsilk;
+  }
+  
+  .button-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    margin-top: 10px; /* Add margin at the top of the button container */
+  }
+  
+  .button-container button {
+    margin-left: 40px; /* Add margin between buttons */
+    background-color: green;
+  }
